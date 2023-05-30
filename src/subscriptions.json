@@ -1,0 +1,44 @@
+[
+  {
+    "pricing_model": "standard",
+    "name": "Unlimited plan",
+    "lookup_key": "unlimited_plan_a",
+    "description": "Unlimited! usage of the service",
+    "unit_amount": 2499,
+    "price_description": "$24.99 / month",
+    "currency": "usd",
+    "recurring": {
+      "interval": "month",
+      "usage_type": "licensed"
+    }
+  },
+  {
+    "pricing_model": "graduated",
+    "name": "Usage plan",
+    "description": "Customer charged based on GB usage of the platform",
+    "lookup_key": "usage_plan_b",
+    "price_description": "$10.99 for first 100 GB, $1 per GB after that",
+
+    "billing_scheme": "tiered",
+    "currency": "usd",
+    "tiers": [
+      {
+        "flat_amount": 1099,
+        "up_to": 100
+      },
+      {
+        "unit_amount": 100,
+        "up_to": "inf"
+      }
+    ],
+    "recurring": {
+      "aggregate_usage": "sum",
+      "interval": "month",
+      "interval_count": 1,
+      "usage_type": "metered"
+    },
+    "expand": [
+      "tiers"
+    ]
+  }
+]

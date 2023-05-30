@@ -1,0 +1,14 @@
+[
+  {
+    "duration": "once",
+    "id": "free-period",
+    "percent_off": 100
+  },
+  {
+    "duration": "repeating",
+    "id": "five-dollars-off",
+    "amount_off": 500,
+    "currency": "usd",
+    "duration_in_months": 3
+  }
+]
